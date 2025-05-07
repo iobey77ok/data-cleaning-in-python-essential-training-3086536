@@ -20,6 +20,8 @@ df
 # %% Drop year & month rows
 df = df[pd.notnull(df['Earnings'])].copy()
 df
+#if earning not null, copy it and
+# create new dataframe
 
 # %%
 def as_date(row, col):
@@ -54,3 +56,4 @@ df
 df = df[['start', 'end', 'Name', 'topic', 'earnings']]
 df.rename(columns={'Name': 'name'}, inplace=True)
 df
+# %%

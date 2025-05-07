@@ -19,7 +19,6 @@ def is_valid_row(row):
 
 
 ok_df = df[df.apply(is_valid_row, axis=1)]
-
 # %%
 num_bad = len(df) - len(ok_df)
 percent_bad = num_bad/len(df) * 100
@@ -28,3 +27,9 @@ if num_bad > 0:
     bad_rows = df[~df.index.isin(ok_df.index)]
     print('bad rows:')
     print(bad_rows)
+# %%
+print(ok_df)
+# %%
+print(len(df))
+print(len(ok_df))
+# %%

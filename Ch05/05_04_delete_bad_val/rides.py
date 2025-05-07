@@ -8,7 +8,8 @@ df
 # %%
 mask = df.eval('name.isnull() | distance <= 0')
 mask
-
 # %%
 df = df[~mask]
 df
+
+# %%

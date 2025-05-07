@@ -5,6 +5,8 @@ df = pd.read_csv('metrics.csv', parse_dates=['time'])
 df
 # %%
 
+#melt = take wide format and turn to
+# narrow form
 df = pd.melt(
     df,
     value_vars=['cpu', 'memory'],
@@ -12,3 +14,5 @@ df = pd.melt(
     var_name='metric',
 )
 df
+
+# %%
